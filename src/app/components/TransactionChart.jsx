@@ -45,7 +45,7 @@ const TransactionChart = () => {
         responsive: true,
         plugins: {
           title: {
-            display: true,
+            display: false,
             text: "Transaction Charts",
             font: {
               size: 16,
@@ -66,6 +66,13 @@ const TransactionChart = () => {
 
   return (
     <div className="bg-white h-77 w-6/6 p-2 shadow-lg rounded-md">
+      <div className="container mx-auto flex justify-between">
+        <p>Transaction Charts</p>
+        <ul className="flex items-end">
+          <li className="rounded-full bg-[#EFF2FF] p-1 font-sm">monthly</li>
+          <li className="rounded-full bg-[#EFF2FF] p-1 font-sm">yearly</li>
+        </ul>
+      </div>
       <canvas className="min-w-[6/6]" ref={chartRef}></canvas>
     </div>
   );

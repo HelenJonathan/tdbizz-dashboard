@@ -30,7 +30,7 @@ export const options: NextAuthOptions = {
 
         // Validate credentials
         if (
-          credentials.email === "helenjonathan333@gmail.com" &&
+          credentials.email === "admin@tradepla.com" &&
           credentials.password === "123456"
         ) {
           // Return user object if credentials are valid
