@@ -5,15 +5,15 @@ import Link from "next/link";
 const Sidebar = () => {
   return (
     <div className="flex h-screen">
-      <div className="p-4 flex flex-col flex-grow lg:flex lg:items-center lg:w-auto  bg-[#050b2b] w-20 flex-shrink-0">
+      <div className="p-4 flex flex-col flex-grow lg:flex lg:items-center lg:w-auto  bg-[#050b2b] w-18 flex-shrink-0">
         <ul className="mt-4 lg:flex-grow">
           <li>
             <Image
               className=""
               src="/Ellipse1.png"
               alt="admin -profile"
-              width="30"
-              height="30"
+              width="25"
+              height="25"
             />
           </li>
           <li className="rounded">
@@ -21,8 +21,8 @@ const Sidebar = () => {
               className="rounded mt-3"
               src="/Group98.jpg"
               alt="admin -profile"
-              width="30"
-              height="30"
+              width="25"
+              height="25"
             />
           </li>
         </ul>
@@ -31,14 +31,14 @@ const Sidebar = () => {
             className=""
             src="/dashicons_admin-users.png"
             alt="admin -profile"
-            width="30"
-            height="30"
+            width="25"
+            height="25"
           />
           <p className="text-white">Admin</p>
         </div>
       </div>
 
-      <div className="bg-white text-050b2b w-64 flex-shrink-0 overflow-y-auto h-screen mt-150px">
+      <div className="bg-white text-050b2b w-46 flex-shrink-0 overflow-y-auto h-screen mt-150px">
         <div className="">
           <Image
             src="/TradeplaAdminLogo.jpg"
@@ -50,7 +50,7 @@ const Sidebar = () => {
           <ul className="mt-10">
             <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
               <Image
-                className="pr-3"
+                className="mr-3"
                 src="/grid.jpg"
                 width="35"
                 height="35"
@@ -60,7 +60,7 @@ const Sidebar = () => {
             </li>
             <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
               <Image
-                className="pr-3"
+                className="mr-3"
                 src="/users.png"
                 width="35"
                 height="35"
@@ -70,7 +70,7 @@ const Sidebar = () => {
             </li>
             <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
               <Image
-                className="pr-3"
+                className="mr-3"
                 src="/git-pull-request.jpg"
                 width="35"
                 height="35"
@@ -80,7 +80,7 @@ const Sidebar = () => {
             </li>
             <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
               <Image
-                className="pr-3"
+                className="mr-3"
                 src="/bar-chart-2.jpg"
                 width="35"
                 height="35"

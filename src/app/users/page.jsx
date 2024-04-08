@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -62,10 +63,12 @@ const Users = () => {
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">Regular</td>
                 <td className="px-6 py-1 my-2 whitespace-nowrap rounded-full bg-[yellow]">
-                  Verified
+                  Pending
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500">View</button>
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
                 </td>
               </tr>
 
@@ -79,47 +82,13 @@ const Users = () => {
                   2023-10-15 09:30:00
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[red]">
+                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
                   Verified
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500">View</button>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[yellow]">
-                  Verified
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500">View</button>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[red]">
-                  Verified
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500">View</button>
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
                 </td>
               </tr>
 
@@ -134,10 +103,12 @@ const Users = () => {
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">Regular</td>
                 <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[yellow]">
-                  Verified
+                  Pending
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500">View</button>
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
                 </td>
               </tr>
 
@@ -151,11 +122,13 @@ const Users = () => {
                   2023-10-15 09:30:00
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[red]">
+                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
                   Verified
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500">View</button>
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
                 </td>
               </tr>
 
@@ -170,10 +143,12 @@ const Users = () => {
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">Regular</td>
                 <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[yellow]">
-                  Verified
+                  Pending
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500">View</button>
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
                 </td>
               </tr>
 
@@ -187,11 +162,53 @@ const Users = () => {
                   2023-10-15 09:30:00
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[red]">
+                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
                   Verified
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
-                  <button className="text-blue-500 ">View</button>
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
+                </td>
+              </tr>
+
+              <tr>
+                <td className="px-6 py-3 whitespace-nowrap">1</td>
+                <td className="px-6 py-3 whitespace-nowrap">
+                  user1@example.com / ********
+                </td>
+                <td className="px-6 py-3 whitespace-nowrap">City A</td>
+                <td className="px-6 py-3 whitespace-nowrap">
+                  2023-10-15 09:30:00
+                </td>
+                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
+                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
+                  Verified
+                </td>
+                <td className="px-6 py-3 whitespace-nowrap">
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
+                </td>
+              </tr>
+
+              <tr>
+                <td className="px-6 py-3 whitespace-nowrap">1</td>
+                <td className="px-6 py-3 whitespace-nowrap">
+                  user1@example.com / ********
+                </td>
+                <td className="px-6 py-3 whitespace-nowrap">City A</td>
+                <td className="px-6 py-3 whitespace-nowrap">
+                  2023-10-15 09:30:00
+                </td>
+                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
+                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
+                  Verified
+                </td>
+                <td className="px-6 py-3 whitespace-nowrap">
+                  <Link href="/viewUser">
+                    <button className="text-blue-500">View</button>
+                  </Link>
                 </td>
               </tr>
             </tbody>
