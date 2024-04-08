@@ -67,7 +67,7 @@ export default function SignIn() {
         <div className="text-center">
           <p>I forgot my password somehow</p>
           <Link
-            href="/resetpassword"
+            href="/"
             className="
           text-[#576FF1]"
           >

@@ -23,30 +23,26 @@ export const options: NextAuthOptions = {
       },
 
       async authorize(credentials, req) {
+        // Check if credentials are provided
+        if (!credentials || !credentials.email || !credentials.password) {
+          return null; // Return null if credentials are missing
+        }
+
+        // Validate credentials
         if (
-          credentials?.email === "helenjonathan333@gmail.com" &&
-          credentials?.password === "123456"
+          credentials.email === "helenjonathan333@gmail.com" &&
+          credentials.password === "123456"
         ) {
+          // Return user object if credentials are valid
           return {
             id: "1",
-            message: "Successful login",
+            email: credentials.email, // Include user's email
+            // Add any additional user data here if needed
           };
+        } else {
+          // Return null if credentials are invalid
+          return null;
         }
-        // === API auth ops ===
-        // const res = await fetch("http://localhost:3000/api/login", {
-        //   method: "POST",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({
-        //     email,
-        //     password,
-        //   }),
-        // });
-        // const user = await res.json();
-        // if (res.ok && user) {
-        //   return user;
-        // } else return null;
       },
     }),
   ],

@@ -1,7 +1,13 @@
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
-const Layout = ({ children }) => {
+import { ReactNode } from 'react';
+
+interface LayoutProps {
+  children: ReactNode; // Define children prop as ReactNode type
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex">
       <div className="sidebar">
@@ -16,3 +22,5 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
+

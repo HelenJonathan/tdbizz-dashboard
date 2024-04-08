@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  /* overflow-x: hidden; */
-}
-
 body {
   background-color: #EFF2FF; 
   scroll-behavior: smooth;
