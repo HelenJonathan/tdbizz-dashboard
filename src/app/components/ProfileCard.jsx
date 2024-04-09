@@ -1,7 +1,21 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import Portal from "./Deleteuser";
 
 const ProfileCard = () => {
+  const [isPortalOpen, setIsPortalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsPortalOpen(true);
+  };
+
+  const handlePortalClose = () => {
+    setIsPortalOpen(false);
+  };
+
   return (
     <div className="bg-white p-2 shadow-md rounded-lg overflow-hidden">
       <div className="flex justify-start items-start py-2">
@@ -38,9 +52,14 @@ const ProfileCard = () => {
             <button className="bg-white-500 text-black border-4 py-2 px-4 rounded-md mr-2 hover:bg-blue-600">
               Suspend Driver
             </button>
-            <button className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-gray-600">
+            <button
+              onClick={handleButtonClick}
+              className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-gray-600"
+            >
               Delete Driver
             </button>
+
+            {isPortalOpen && <Portal onClose={handlePortalClose} />}
           </div>
           <p className="text-[#707083]">*Perform action on driver</p>
         </div>
