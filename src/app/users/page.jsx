@@ -1,15 +1,28 @@
+"use client"
+
 import Layout from "../components/Layout";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import Data from "../database.json"
+import { useState } from "react";
 
 const Users = () => {
+
+  const [currentPage, setCurrentPage] = useState(1)
+  const recordsPerPage = 7;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex -recordsPerPage;
+  const records = Data.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(Data.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1)
+
   return (
     <div>
-      <Layout>
+      <Layout page="users">
         <div className="bg-white w-full h-full py-4">
           <div className="flex px-4">
-            <h3 className="grow font-bold">Users list</h3>
+            <h3 className="grow font-bold">User list</h3>
             <div className="relative bg-[#EFF2FF]">
               <input
                 type="text"
@@ -28,195 +41,100 @@ const Users = () => {
           <table className="min-w-full divide-y divide-gray-200 mt-2">
             <thead className="bg-[#EFF2FF]">
               <tr>
-                <th className="px-4 py-4 text-left text-xs font-medium text-[#4C5483] tracking-wider">
+                <th className="px-4 py-4 text-left text-xs font-medium text-[#4C5483]">
                   S/N
                 </th>
-                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500">
                   Email/Password
                 </th>
-                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500">
                   Location
                 </th>
-                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500">
                   Last Active
                 </th>
-                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500">
                   User Type
                 </th>
-                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-4 py-4 text-left text-xs font-medium text-gray-500">
                   KYC Status
                 </th>
                 <th className="px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Action
+                  
                 </th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
+              {records.map((d,i) => (
+
+                <tr key={i}>
+                <td className="px-3 py-2 whitespace-nowrap">{d.SN}</td>
+                <td className="px-3 py-2 whitespace-nowrap">
+                {d.EmailPassword}
                 </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
+                <td className="px-3 py-2 whitespace-nowrap">{d.Location}</td>
+                <td className="px-3 py-2 whitespace-nowrap">
+                {d.LastActive}
                 </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-1 my-2 whitespace-nowrap rounded-full bg-[yellow]">
-                  Pending
+                <td className="px-3 py-2 whitespace-nowrap">{d.UserType}</td>
+                <td className="px-3 py-1 my-2">
+                  <span className={`${d.KYCStatus === 'Unverified' ? 'bg-[#E21609]' : d.KYCStatus === 'Pending' ? 'bg-[#F2A000]' : d.KYCStatus === 'Verified' ? 'bg-[#27AE60]' : ''} p-2 rounded-full`}>
+                    {d.KYCStatus}
+                  </span>             
                 </td>
                 <td className="px-6 py-3 whitespace-nowrap">
                   <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
+                    <button className="text-blue-500">{d.Action}</button>
                   </Link>
                 </td>
               </tr>
 
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
-                  Verified
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
-                  </Link>
-                </td>
-              </tr>
 
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[yellow]">
-                  Pending
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
-                  </Link>
-                </td>
-              </tr>
+              ) )}
+              
+             
 
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
-                  Verified
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
-                  </Link>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[yellow]">
-                  Pending
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
-                  </Link>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
-                  Verified
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
-                  </Link>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
-                  Verified
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
-                  </Link>
-                </td>
-              </tr>
-
-              <tr>
-                <td className="px-6 py-3 whitespace-nowrap">1</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  user1@example.com / ********
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">City A</td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  2023-10-15 09:30:00
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">Regular</td>
-                <td className="px-6 py-3 whitespace-nowrap rounded-full bg-[green]">
-                  Verified
-                </td>
-                <td className="px-6 py-3 whitespace-nowrap">
-                  <Link href="/viewUser">
-                    <button className="text-blue-500">View</button>
-                  </Link>
-                </td>
-              </tr>
             </tbody>
           </table>
+          <nav>
+            <ul className="flex mx-auto flex justify-end items-end mr-8">
+              <li className="mr-2">
+                <a href="#" className="" onClick={prePage}>PREV</a>
+              </li>
+              {
+                numbers.map((n, i) => (
+                  <li className={`mr-2 text-blue-500 ${currentPage === n ? "active" : ""}`} key={1}>
+                    <a href="/users" className="" onClick={() => changeCPage(n)}>{n}</a>
+                  </li>
+
+                ))
+              }
+              <li>
+                <a href="#" className="text-blue-500" onClick={nextPage}>NEXT</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </Layout>
     </div>
   );
+
+  function prePage() {
+    if(currentPage !== 1) {
+      setCurrentPage(currentPage - 1)
+    }
+  }
+
+  function changeCPage(id) {
+    setCurrentPage(id)
+  }
+
+  function nextPage() {
+    if(currentPage !== npage) {
+      setCurrentPage(currentPage + 1)
+    }
+  }
+
 };
 
 export default Users;

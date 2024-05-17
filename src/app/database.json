@@ -1,0 +1,122 @@
+ [
+        {
+           
+            "SN": "01",
+            "EmailPassword": "daniella.jacobbs@example.com",
+            "Location": "United Kingdom",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Customer",
+            "KYCStatus": "Verified",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "+44 701 873 94",
+            "Location": "United Kingdom",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Seller",
+            "KYCStatus": "Verified",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "jackson.graham@example.com",
+            "Location": "United Kingdom",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Delivery agent",
+            "KYCStatus": "Pending",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword":"+234 918 374 7389",
+            "Location": "Nigeria",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Service provider",
+            "KYCStatus": "Pending",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "+234 918 374 7366",
+            "Location": "Nigeria",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Shop owner",
+            "KYCStatus": "Verified",
+            "Action": "View"
+        },
+        {
+           
+            "SN": "01",
+            "EmailPassword": "tim.jennings@example.com",
+            "Location": "Nigeria",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Service provider",
+            "KYCStatus": "Verified",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "+44 701 233 45",
+            "Location": "United Kingdom",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Seller",
+            "KYCStatus": "Verified",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "+234 918 374 7320",
+            "Location": "Nigeria",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Customer",
+            "KYCStatus": "Verified",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "+44 701 873 94",
+            "Location": "United Kingdom",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Customer",
+            "KYCStatus": "Verified",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "debra.holt@example.com",
+            "Location": "Nigeria",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Customer",
+            "KYCStatus": "Unverified",
+            "Action": "View"
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "sara.cruz@example.com",
+            "Location": "Nigeria",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Customer",
+            "KYCStatus": "Verified",
+            "Action": ""
+        },
+        {
+            
+            "SN": "01",
+            "EmailPassword": "+44 701 873 94",
+            "Location": "United Kingdom",
+            "LastActive": "09/11/2022 10:33 AM",
+            "UserType": "Customer",
+            "KYCStatus": "Unverified",
+            "Action": "View"
+        }
+    ]

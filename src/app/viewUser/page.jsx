@@ -48,9 +48,12 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[yellow]">
-                    Pending
-                  </td>
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[yellow]">
+                  Pending
+                  </span>             
+                </td>
+                 
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00
@@ -69,9 +72,12 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[green]">
-                    Successful
-                  </td>
+                  
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[#27AE60]">
+                  Successful
+                  </span>             
+                </td>
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00
@@ -90,9 +96,11 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[green]">
-                    Successful
-                  </td>
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[#27AE60]">
+                  Successful
+                  </span>             
+                </td>
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00
@@ -111,9 +119,11 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[green]">
-                    Successful
-                  </td>
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[#27AE60]">
+                  Successful
+                  </span>             
+                </td>
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00
@@ -132,9 +142,11 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[green]">
-                    Successful
-                  </td>
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[#27AE60]">
+                  Successful
+                  </span>             
+                </td>
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00
@@ -153,9 +165,11 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[green]">
-                    Successful
-                  </td>
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[#27AE60]">
+                  Successful
+                  </span>             
+                </td>
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00
@@ -174,9 +188,12 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[red]">
-                    Failed
-                  </td>
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[red]">
+                  Failed
+                  </span>             
+                </td>
+                  
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00
@@ -195,9 +212,12 @@ const ViewUsers = () => {
                   <td className="px-1 py-3 text-xs whitespace-nowrap">
                     GTB: 0224656581
                   </td>
-                  <td className="px-1 mr-1 my-2 text-xs whitespace-nowrap rounded-full bg-[yellow]">
-                    Pending
-                  </td>
+                  
+                  <td className="px-3 py-1 my-2">
+                  <span className="p-2 rounded-full bg-[yellow]">
+                  Pending
+                  </span>             
+                </td>
                   <td className="px-1 py-3 whitespace-nowrap">
                     <button className="text-[blue] text-xs">
                       # 344,978.00

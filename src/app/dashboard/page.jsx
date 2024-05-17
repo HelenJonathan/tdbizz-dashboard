@@ -6,7 +6,7 @@ import TransactionChart from "../components/TransactionChart";
 
 const DashboardPage = () => {
   return (
-    <Layout>
+    <Layout page="dashboard">
       <div className="dashboard">
         <div className="grid grid-cols-4 gap-2 overflow-x-hidden overflow-y-auto ">
           <SmallBox title="Total Users" value="88,166" imageUrl="/users.png" />

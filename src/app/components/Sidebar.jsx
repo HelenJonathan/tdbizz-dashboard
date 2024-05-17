@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-const Sidebar = () => {
+const Sidebar = ({activePage}) => {
   return (
     <div className="flex h-screen">
       <div className="p-4 flex flex-col flex-grow lg:flex lg:items-center lg:w-auto  bg-[#050b2b] w-18 flex-shrink-0">
@@ -48,7 +48,7 @@ const Sidebar = () => {
             className="m-5"
           />
           <ul className="mt-10">
-            <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
+            <li className={`${activePage === 'dashboard' ? 'bg-[#050b2b] text-[#e4bb81]'  : ''} flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4`}>
               <Image
                 className="mr-3"
                 src="/grid.jpg"
@@ -58,7 +58,7 @@ const Sidebar = () => {
               />
               <Link href="/dashboard">Dashboard</Link>
             </li>
-            <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
+            <li className={`${activePage === 'users' ? 'bg-[#050b2b] text-[#e4bb81]'  : ''} flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4`}>
               <Image
                 className="mr-3"
                 src="/users.png"
@@ -68,7 +68,7 @@ const Sidebar = () => {
               />
               <Link href="/users">Users</Link>
             </li>
-            <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
+            <li className={`${activePage === 'sellers' ? 'bg-[#050b2b] text-[#e4bb81]'  : ''} flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4`}>
               <Image
                 className="mr-3"
                 src="/git-pull-request.jpg"
@@ -76,9 +76,9 @@ const Sidebar = () => {
                 height="35"
                 alt="grid"
               />
-              <Link href="/dashboard">Sellers requests</Link>
+              <Link href="/sellers">Sellers requests</Link>
             </li>
-            <li className="flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4">
+            <li className={`${activePage === 'transactions' ? 'bg-[#050b2b] text-[#e4bb81]'  : ''} flex hover:bg-[#050b2b] hover:text-[#e4bb81] px-3 py-4`}>
               <Image
                 className="mr-3"
                 src="/bar-chart-2.jpg"
@@ -86,7 +86,7 @@ const Sidebar = () => {
                 height="35"
                 alt="grid"
               />
-              <Link href="/dashboard">Transactions</Link>
+              <Link href="/transactions">Transactions</Link>
             </li>
           </ul>
         </div>
