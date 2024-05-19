@@ -15,7 +15,7 @@ const Suspend = ({isVisible, onClose }) => {
 
   
   return (
-    <main onClick={()=>handleClose()}   id="wrapper" className="flex bg-black bg-opacity-25 inset-0 fixed backdrop-blur-sm min-h-screen items-center justify-center m-auto">
+    <main onClick={handleClose}   id="wrapper" className="flex bg-black bg-opacity-25 inset-0 fixed backdrop-blur-sm min-h-screen items-center justify-center m-auto">
       <section  className="bg-white p-6 rounded w-[400px]">
   <div className="flex justify-between">
           <p className="text-sm:text-sm text-gray-600 font-sm">Suspend User</p>
